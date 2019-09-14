@@ -5,7 +5,7 @@ INSERT INTO days (name)
 SELECT day FROM days;
 
 WITH times(time) AS (
-	VALUES ('0800 / 8am'), ('0900 / 9am'), ('1000 / 10am'), ('1100 / 11am'), ('1200 / 12pm'), ('1300 / 1pm'), ('1400 / 2pm'), ('1500 / 3pm'), ('1600 / 4pm')
+	VALUES ('0800 / \n8am'), ('0900 / \n9am'), ('1000 / \n10am'), ('1100 / \n11am'), ('1200 / \n12pm'), ('1300 / \n1pm'), ('1400 / \n2pm'), ('1500 / \n3pm'), ('1600 / \n4pm')
 )
 INSERT INTO appointments (time, day_id)
 SELECT time, id as day_id FROM days, times ORDER BY day_id, time;
